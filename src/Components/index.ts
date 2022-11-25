@@ -1,5 +1,5 @@
 export * from "./Button";
-export * from "./DashboardLayout"
+export * from "./DashboardLayout";
 export * from "./Header";
 export * from "./Layout";
 export * from "./LeftMenu";

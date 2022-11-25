@@ -1,5 +1,3 @@
-
-
-export function Search(){
-    return <div />
+export function Search() {
+    return <div />;
 }

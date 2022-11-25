@@ -1,3 +1,3 @@
-export function RiskBadge(){
-    return <div />
+export function RiskBadge() {
+    return <div />;
 }

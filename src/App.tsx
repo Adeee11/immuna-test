@@ -6,20 +6,20 @@ import { Login, Dashboard } from "./Pages";
 import { theme } from "./theme";
 
 function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    return (
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
 
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="/login" element={<Login />} />
-        </Route>
-        <Route path="/" element={<DashboardLayout />}>
-          <Route path="/dash" element={<Dashboard />} />
-        </Route>
-      </Routes>
-    </ThemeProvider>
-  );
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route path="/login" element={<Login />} />
+                </Route>
+                <Route path="/" element={<DashboardLayout />}>
+                    <Route path="/dashboard" element={<Dashboard />} />
+                </Route>
+            </Routes>
+        </ThemeProvider>
+    );
 }
 
 export default App;
