@@ -1,5 +1,5 @@
 import { Box, Grid, Paper, Typography } from "@mui/material";
-import { styled, css } from "@mui/system";
+import { styled, css } from "@mui/material";
 import React from "react";
 import { Ethereum } from "../../Assets/Icons";
 import BitCoinBg from "../../Assets/Images/bitcoin_bg.png";
@@ -17,8 +17,10 @@ const BitcoinImg = styled("img")`
 `;
 
 const LoginContainer = styled(Grid)`
-    height: calc(100vh - 65px);
-    background-color: #f7fbff;
+    ${({ theme }) => css`
+        height: calc(100vh - ${theme.navigation.height});
+        background-color: #f7fbff;
+    `}
 `;
 
 const Overlay = styled("div")`

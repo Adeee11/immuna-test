@@ -1,4 +1,4 @@
-import { Box, css, styled } from "@mui/system";
+import { Box, css, styled } from "@mui/material";
 import React from "react";
 import { LogoMedium } from "../Logo";
 import {
@@ -16,7 +16,9 @@ const LeftMenuWrapper = styled(Box)`
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    width: 268px;
+    position: fixed;
+    z-index: 1;
+    width: ${({ theme }) => theme.leftMenu.width};
     box-shadow: 0px 2px 10px rgba(132, 132, 132, 0.07);
 `;
 
@@ -32,7 +34,7 @@ const Link = (
 
 export const StyledLink = styled(Link)`
     ${({ theme, isActive }) => {
-        const DefaultStyles = `background-color: ${theme.palette.primary.white};
+        const DefaultStyles = `background-color: ${theme.palette.common.white};
       color: #4d4d4d;`;
         const ActiveStyles = ` background-color: ${theme.palette.primary.main};
         color: ${theme.palette.common.white};`;
@@ -57,7 +59,7 @@ export const StyledLink = styled(Link)`
 `;
 
 const LeftMenuList = styled(Box)`
-    width: 194px;
+    width: 100%;
     margin-top: 65px;
 `;
 

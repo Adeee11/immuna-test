@@ -1,13 +1,13 @@
 import { Box, Grid } from "@mui/material";
-import { styled, css } from "@mui/system";
+import { styled, css } from "@mui/material";
 import { AccountInfo } from "../AccountInfo";
 import { Logo } from "../Logo";
 
-const StyledHeader = styled("header")`
+const StyledHeader = styled("nav")`
     ${({ theme }) => {
         return css`
             background-color: ${theme.palette.common.white};
-            height: 65px;
+            height: ${theme.navigation.height};
             box-shadow: 0px 1px 10px rgba(132, 132, 132, 0.07);
         `;
     }};

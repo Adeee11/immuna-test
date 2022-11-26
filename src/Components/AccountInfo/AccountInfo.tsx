@@ -1,5 +1,4 @@
-import { styled, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { styled, Typography, Box } from "@mui/material";
 import React from "react";
 import { ArrowDown } from "../../Assets/Icons";
 
@@ -39,7 +38,7 @@ export const AccountInfo = (props: IAccountInfo) => {
             alignItems={"center"}
             justifyContent="center"
         >
-            <Box marginRight={1}>
+            <Box marginRight={1} display="flex" alignItems="center">
                 {props.img ? <AccountImg src={props.img} /> : <PlaceHolder />}
             </Box>
             <Typography marginRight={1}>{props.name}</Typography>

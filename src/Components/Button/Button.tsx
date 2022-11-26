@@ -1,4 +1,4 @@
-import { css, styled } from "@mui/system";
+import { css, styled } from "@mui/material";
 
 export const Button = styled("button")`
     ${({ theme }) => {
