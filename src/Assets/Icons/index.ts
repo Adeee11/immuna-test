@@ -10,3 +10,6 @@ export * from "./EthIconSmall";
 export * from "./CopyIcon";
 export * from "./ChevronLeft";
 export * from "./ChevronRight";
+export * from "./TableIcon";
+export * from "./ExternalIcon";
+export * from "./PoolIcon";

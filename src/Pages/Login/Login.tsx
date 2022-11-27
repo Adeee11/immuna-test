@@ -9,7 +9,8 @@ import Ellipse1img from "../../Assets/Images/ellipse1.png";
 import Ellipse2img from "../../Assets/Images/ellipse2.png";
 import { useNavigate } from "react-router-dom";
 const BitcoinImg = styled("img")`
-    object-fit: fill;
+    object-fit: cover;
+    object-position: 0 -200px ;
     display: block;
     overflow: hidden;
     height: 100%;
@@ -76,7 +77,7 @@ export function Login() {
                     flexDirection="column"
                     alignItems="center"
                     position="relative"
-                    paddingTop={12}
+                    justifyContent="center"
                     paddingLeft={4}
                     paddingRight={4}
                 >
