@@ -4,7 +4,7 @@ import { LeftMenu } from "../LeftMenu";
 import { TopBar } from "../TopBar";
 
 const DashboardWrapper = styled("section")`
-    background-color: #f8f8f8;
+    background-color: ${({ theme }) => theme.colors.blue.primary0};
     height: 100vh;
     width: 100vw;
 `;

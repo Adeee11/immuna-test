@@ -29,7 +29,13 @@ const BadgeComp = styled(Box)`
             width: 100px;
             text-align: center;
             padding: 9px;
-            ${disableClick ? css`cursor: default;` : css`cursor: pointer;`}
+            ${disableClick
+                ? css`
+                      cursor: default;
+                  `
+                : css`
+                      cursor: pointer;
+                  `}
             ${StyleMap[type]}
         `;
     }}

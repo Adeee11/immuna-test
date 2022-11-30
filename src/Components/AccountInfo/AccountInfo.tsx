@@ -1,6 +1,5 @@
 import { styled, Typography, Box } from "@mui/material";
-import React from "react";
-import { ArrowDown } from "../../Assets/Icons";
+import { ArrowDown } from "Assets/Icons";
 
 type IAccountInfo = {
     name: string;
@@ -18,7 +17,7 @@ const PlaceHolder = styled("div")`
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: #d1d1d1;
+    background-color: ${({ theme }) => theme.colors.grey.primary2};
     overflow: hidden;
 `;
 
@@ -27,7 +26,7 @@ const AccountInfoBox = styled(Box)`
     padding: ${({ theme }) => theme.spacing(2)};
     transition: all 0.3s linear;
     &:hover {
-        background-color: #efefef;
+        background-color: ${({ theme }) => theme.colors.grey.primary1};
     }
 `;
 

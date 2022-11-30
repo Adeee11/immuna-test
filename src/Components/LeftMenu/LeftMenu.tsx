@@ -6,12 +6,12 @@ import {
     DashboardIcon,
     DefendIcon,
     ProtectIcon,
-} from "../../Assets/Icons";
+} from "Assets/Icons";
 import { LeftMenuItem } from "./LeftMenuItem";
 
 const LeftMenuWrapper = styled(Box)`
     padding: 30px 36px;
-    background: #ffffff;
+    background: ${({ theme }) => theme.palette.common.white};
     display: flex;
     align-items: center;
     flex-direction: column;

@@ -1,9 +1,11 @@
-import { Box, styled } from "@mui/material";
+import { Box, css, styled } from "@mui/material";
 import React from "react";
 
 const BadgeOuter = styled("div")`
-    background-color: #e0eeff;
-    color: #6c6c6c;
+    ${({ theme }) => css`
+        background-color: ${theme.colors.blue.primary10};
+        color: ${theme.colors.grey.primary7};
+    `}
     padding: 0 24px;
     padding-right: 0;
     height: 40px;
@@ -21,8 +23,11 @@ const BadgeOuter = styled("div")`
 `;
 
 const BadgeInner = styled(Box)`
-    background-color: #cbe1ff;
-    color: #383838;
+    ${({ theme }) => css`
+        background-color: ${theme.colors.blue.primary9};
+        color: ${theme.colors.grey.primary6};
+    `}
+
     padding: 0 24px;
     padding-right: 30px;
     height: 40px;
@@ -39,7 +44,12 @@ export const EthBadge = (props: {
 }) => {
     return (
         <BadgeOuter>
-            <Box component="span" display="flex" alignItems="center" marginRight={1}>
+            <Box
+                component="span"
+                display="flex"
+                alignItems="center"
+                marginRight={1}
+            >
                 {props.icon}
             </Box>
             {props.network}

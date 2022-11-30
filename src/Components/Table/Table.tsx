@@ -1,8 +1,11 @@
-import { styled } from "@mui/material";
-import { TableIcon } from "../../Assets/Icons";
+import { css, styled } from "@mui/material";
+import { TableIcon } from "Assets/Icons";
 
 const StyledTable = styled("table")`
-    background: #ffffff;
+    ${({ theme }) =>
+        css`
+            background: ${theme.palette.common.white};
+        `}
     box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.07);
     border-radius: 5px;
     font-weight: 400;
@@ -25,11 +28,21 @@ const TR = styled("tr")`
     font-weight: inherit;
     font-size: inherit;
     &:nth-child(even) {
-        background-color: #f4f9ff;
+        ${({ theme }) =>
+            css`
+                background: ${theme.colors.grey.primary12};
+            `}
     }
 `;
 const TD = styled("td")`
     padding: 20px 24px;
+`;
+
+const THead = styled("thead")`
+    ${({ theme }) =>
+        css`
+            background: ${theme.colors.blue.primary12};
+        `}
 `;
 
 export const Table = (props: {
@@ -47,7 +60,7 @@ export const Table = (props: {
                     return <col key={item.key} width={item.size} />;
                 })}
             </colgroup>
-            <thead style={{ backgroundColor: "#E6F0FF" }}>
+            <THead>
                 <tr>
                     {props.columns.map((item) => {
                         return (
@@ -62,7 +75,7 @@ export const Table = (props: {
                         );
                     })}
                 </tr>
-            </thead>
+            </THead>
             <tbody>
                 {props.data.map((row) => {
                     return (

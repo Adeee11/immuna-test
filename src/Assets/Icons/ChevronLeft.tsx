@@ -2,10 +2,7 @@ import { SvgIcon, SvgIconProps } from "@mui/material";
 
 export const ChevronLeft = (props: SvgIconProps) => {
     return (
-        <SvgIcon
-            viewBox="0 0 7 11"
-            {...props}
-        >
+        <SvgIcon viewBox="0 0 7 11" {...props}>
             <path
                 fillRule="evenodd"
                 clipRule="evenodd"

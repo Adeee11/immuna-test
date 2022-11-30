@@ -1,26 +1,28 @@
-import { Box, styled } from "@mui/material";
-import { SearchIcon } from "../../Assets/Icons";
+import { Box, css, styled } from "@mui/material";
+import { SearchIcon } from "Assets/Icons";
 
 const StyledSearch = styled("input")`
-    border: 1px solid #dcdcdc;
-    border-radius: 20px;
-    height: 40px ;
-    background-color: #fff;
-    color: #9b9b9b;
-    width: 100%;
-    display: block;
-    font-size: 14px;
-    font-weight: 400;
-    min-width: 352px;
-    padding: 12px 40px;
-    transition: all 0.3s linear;
-    &:focus,
-    &:hover {
-        outline: none;
-    }
-    &::placeholder {
-        color: #9b9b9b;
-    }
+    ${({ theme }) => css`
+        border: 1px solid ${theme.colors.grey.primary9};
+        border-radius: 20px;
+        height: 40px;
+        background-color: ${theme.palette.common.white};
+        color: ${theme.colors.grey.primary10};
+        width: 100%;
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        min-width: 352px;
+        padding: 12px 40px;
+        transition: all 0.3s linear;
+        &:focus,
+        &:hover {
+            outline: none;
+        }
+        &::placeholder {
+            color: ${theme.colors.grey.primary10};
+        }
+    `}
 `;
 
 const StyledSearchIcon = styled(SearchIcon)`

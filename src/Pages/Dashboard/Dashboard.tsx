@@ -1,32 +1,52 @@
-import { IconButton, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import { CopyIcon, EthIconSmall } from "Assets/Icons";
 import {
-    CopyIcon,
-    EthIconSmall,
-    ExternalIcon,
-    PoolIcon,
-} from "../../Assets/Icons";
-import {
-    Badge,
     DashboardContainer,
     EthBadge,
+    MonitorTable,
     PageSelect,
     Pagination,
     Search,
-} from "../../Components";
-import { Table } from "../../Components/Table";
+    IconButton,
+} from "Components";
 
 const data = [
-    ["Uniswap", "0x75f5...1666", "1.104008 WETH / 2,888.28 USDC", "Green"],
-    ["Uniswap", "0x75f5...1666", "300 DAIDAI / 300 USDC", "Red"],
-    ["Uniswap", "0x75f5...1666", "500 BUSD / 500 USDT", "Yellow"],
-    ["Uniswap", "0x75f5...1666", "0.624822 WETH / 339,97585406 1INCH", "Green"],
-    ["Uniswap", "0x75f5...1666", "100 DAIDAI / 0,03837881 WETH", "Green"],
-] as const;
+    {
+        name: "Pancakeswap",
+        contract: "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+        color: "Green",
+    },
+    {
+        name: "Uniswap",
+        contract: "0xbf5140a22578168fd562dccf235e5d43a02ce9b1",
+        color: "Red",
+    },
+    {
+        name: "BUSD",
+        contract: "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        color: "Yellow",
+    },
+    {
+        name: "Aave",
+        contract: "0xfb6115445bff7b52feb98650c87f44907e58f802",
+        color: "Green",
+    },
+    {
+        name: "Uniswap",
+        contract: "0xbf5140a22578168fd562dccf235e5d43a02ce9b1",
+        color: "Green",
+    },
+];
 
 export function Dashboard() {
     return (
-        <Box display="flex" flexDirection="column" justifyContent="space-between" height="100%">
+        <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
+            height="100%"
+        >
             <Box>
                 <DashboardContainer>
                     <Box
@@ -55,88 +75,21 @@ export function Dashboard() {
                                     address="0xBAD7...E116"
                                 />
                             </Box>
-                            <IconButton style={{ backgroundColor: "#CBE1FF" }}>
-                                <CopyIcon
-                                    style={{
-                                        fontSize: 24,
-                                        transform: "scale(.6)",
-                                    }}
-                                />
+                            <IconButton>
+                                <CopyIcon />
                             </IconButton>
                         </Box>
                     </Box>
                 </DashboardContainer>
                 <DashboardContainer justifyContent="space-between">
-                    <Table
-                        columns={[
-                            { title: "Protocol", key: "protocol", size: "15%" },
-                            { title: "Pool", key: "pool", size: "20%" },
-                            { title: "Balance", key: "balance", size: "30%" },
-                            { title: "Risk Status", key: "risk", size: "35%" },
-                        ]}
-                        data={data.map((item, index) => {
-                            return {
-                                key: index,
-                                values: [
-                                    <Box
-                                        component="a"
-                                        display="flex"
-                                        target="_blank"
-                                        href="https://uniswap.com"
-                                        alignItems="center"
-                                        fontSize="inherit"
-                                        style={{
-                                            cursor: "pointer",
-                                            textDecoration: "none",
-                                            color: "inherit",
-                                        }}
-                                    >
-                                        <Box component="span" marginRight={1}>
-                                            {item[0]}
-                                        </Box>{" "}
-                                        <ExternalIcon />
-                                    </Box>,
-                                    <Box
-                                        component="a"
-                                        display="flex"
-                                        alignItems="center"
-                                        fontSize="16px"
-                                        target="_blank"
-                                        href="https://bscscan.com"
-                                        style={{
-                                            cursor: "pointer",
-                                            textDecoration: "none",
-                                            color: "inherit",
-                                        }}
-                                    >
-                                        <PoolIcon />{" "}
-                                        <Box
-                                            marginLeft={"20px"}
-                                            component="span"
-                                            marginRight={"20px"}
-                                        >
-                                            {" "}
-                                            {item[1]}
-                                        </Box>{" "}
-                                        <ExternalIcon />
-                                    </Box>,
-                                    <Typography fontSize="inherit">
-                                        {item[2]}
-                                    </Typography>,
-
-                                    <Badge
-                                        type={item[3].toLowerCase() as "green"}
-                                    >
-                                        {item[3]}
-                                    </Badge>,
-                                ],
-                            };
-                        })}
-                    />
+                    <MonitorTable data={data} />
                 </DashboardContainer>
             </Box>
             <Box>
-                <DashboardContainer paddingBottom={2} justifyContent="space-between">
+                <DashboardContainer
+                    paddingBottom={2}
+                    justifyContent="space-between"
+                >
                     <Box display="flex" alignItems="center" marginRight={2}>
                         <Typography
                             display="flex"

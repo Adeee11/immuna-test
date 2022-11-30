@@ -4,7 +4,9 @@ import { useMatch, useNavigate } from "react-router-dom";
 import { StyledLink } from "./LeftMenu";
 
 export const LeftMenuItem = ({
-    icon, location, text,
+    icon,
+    location,
+    text,
 }: {
     icon: React.ReactElement;
     location: string;

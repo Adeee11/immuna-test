@@ -12,3 +12,7 @@ export * from "./PageSelect";
 export * from "./Table";
 export * from "./Badge";
 export * from "./RiskModal";
+export * from "./Input";
+export * from "./LoginForm";
+export * from "./IconButton";
+export * from "./Text";

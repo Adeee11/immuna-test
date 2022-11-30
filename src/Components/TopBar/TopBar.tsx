@@ -1,14 +1,8 @@
-import {
-    Box,
-    css,
-    IconButton,
-    styled,
-    Typography,
-} from "@mui/material";
-import { NotificationIcon } from "../../Assets/Icons";
+import { Box, css, IconButton, styled, Typography } from "@mui/material";
+import { NotificationIcon } from "Assets/Icons";
 import { AccountInfo } from "../AccountInfo";
 import { Search } from "../Search";
-import betty from "../../Assets/Images/betty.png";
+import betty from "Assets/Images/betty.png";
 import { DashboardContainer } from "../DashboardContainer";
 
 const StyledNav = styled("nav")`

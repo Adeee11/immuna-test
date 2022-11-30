@@ -13,3 +13,5 @@ export * from "./ChevronRight";
 export * from "./TableIcon";
 export * from "./ExternalIcon";
 export * from "./PoolIcon";
+export * from "./DaiIcon";
+export * from "./CloseIcon";
