@@ -1,12 +1,10 @@
 import { Grid } from "@mui/material";
 import { styled, css } from "@mui/material";
-
 import BitCoinBg from "Assets/Images/bitcoin_bg.png";
 import { LoginForm } from "Components";
 
 const BitcoinImg = styled("img")`
     object-fit: cover;
-    object-position: 0 -200px;
     display: block;
     overflow: hidden;
     height: 100%;
@@ -17,6 +15,14 @@ const LoginContainer = styled(Grid)`
     ${({ theme }) => css`
         height: calc(100vh - ${theme.navigation.height});
         background-color: ${theme.colors.grey.primary13};
+    `}
+`;
+
+const HideOnTablet = styled(Grid)`
+    ${({ theme }) => css`
+        ${theme.breakpoints.down("md")} {
+            display: none;
+        }
     `}
 `;
 
@@ -34,10 +40,16 @@ export function Login() {
     return (
         <div>
             <LoginContainer container>
-                <Grid item position={"relative"} height="100%" xs={12} md={6}>
+                <HideOnTablet
+                    item
+                    position={"relative"}
+                    height="100%"
+                    xs={12}
+                    md={6}
+                >
                     <BitcoinImg src={BitCoinBg} />
                     <Overlay />
-                </Grid>
+                </HideOnTablet>
                 <Grid
                     item
                     xs={12}

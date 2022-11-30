@@ -11,7 +11,7 @@ interface IPaginationProps {
 const PaginationContainer = styled(Box)`
     ${({ theme }) => {
         return css`
-            color: ${theme.palette.common.white};
+            background-color: ${theme.palette.common.white};
             border-radius: 6px;
             padding: 8px;
             display: flex;

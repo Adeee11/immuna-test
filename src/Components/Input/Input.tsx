@@ -6,7 +6,7 @@ export const Input = styled("input")`
             border: 1px solid ${theme.colors.blue.primary11};
             border-radius: 46px;
             background-color: ${theme.colors.blue.primary11};
-            color: ${theme.colors.blue.primary8};
+            color: ${theme.colors.grey.primary8};
             width: 100%;
             display: block;
             font-size: 14px;
@@ -18,7 +18,7 @@ export const Input = styled("input")`
                 background-color: ${theme.palette.common.white};
             }
             &::placeholder {
-                color: ${theme.colors.blue.primary8};
+                color: ${theme.colors.grey.primary8};
             }
         `;
     }}

@@ -8,6 +8,7 @@ const StyledHeader = styled("nav")`
         return css`
             background-color: ${theme.palette.common.white};
             height: ${theme.navigation.height};
+            padding: 0 10px;
             box-shadow: 0px 1px 10px rgba(132, 132, 132, 0.07);
         `;
     }};
